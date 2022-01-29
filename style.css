@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root {
+    font-size: 15;
+}
+* {
+    font-family: 'Inter', sans-serif;
+    color: white;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+body, html {
+    min-height: 100vh;
+    background: linear-gradient(135deg, hsl(250, 90%, 5%), hsl(0, 92%, 5%)) no-repeat;
+}
+
+button, input, .link-btn {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: 1px solid hsla(0, 0%, 100%, .2);
+    padding: 1rem;
+    background-color: hsla(0, 50%, 100%, .1);
+    border-radius: .3rem;
+    transition: 200ms;
+    text-decoration: none;
+}
+
+input {
+    width: calc(100%);
+}
+
+button {
+    background-color: hsla(0, 50%, 100%, .2);
+    cursor: pointer;
+}
+button:hover, .link-btn:hover {
+    background-color: hsla(0, 50%, 100%, .15);
+}
+button:active, .link-btn:hover {
+    background-color: hsla(0, 50%, 100%, .1);
+}
+
+button.w-full {
+    width: 100%;
+}
+
+button:disabled, input:disabled, #id {
+    filter: grayscale(100);
+    pointer-events: none;
+    opacity: .5;
+}
+
+input[type="text"]::-webkit-outer-spin-button,
+input[type="text"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+input:focus {
+    border: 1px solid hsla(0, 0%, 100%, .5);
+}
+
+input::placeholder {
+    color: hsla(0, 0%, 100%, .5);
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+form > div {
+    flex: 1 1 300px;
+    padding: 1.5rem;
+}
+
+form > div > input{
+    display: block;
+    margin-bottom: 2rem;
+}   
+
+.with-btn {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.with-btn > input {
+    flex: 1;
+}
+
+@media screen and (max-width: 756px) {
+    form {
+        max-width: 500px;
+    }
+}
+
+.success {
+    background-color: #C1E1C1;
+    color: black;
+    padding: 1rem;
+}
